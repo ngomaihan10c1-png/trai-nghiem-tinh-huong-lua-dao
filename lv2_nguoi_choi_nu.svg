@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 380" width="100%" height="100%">
+  <defs>
+    <!-- Background Glow -->
+    <linearGradient id="victimGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#9f1239" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="blouseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="skinGradF" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="phoneGradF" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#881337"/>
+    </linearGradient>
+    <filter id="glowDropF" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#f43f5e" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Backdrop Aura -->
+  <circle cx="140" cy="180" r="120" fill="url(#victimGlow)"/>
+
+  <!-- Alarmed Question / Warning Floating Glyphs -->
+  <g transform="translate(48, 80)">
+    <circle cx="12" cy="12" r="12" fill="#ef4444" opacity="0.9"/>
+    <text x="7" y="18" font-family="Arial, sans-serif" font-size="16" font-weight="900" fill="#ffffff">!</text>
+  </g>
+  <g transform="translate(225, 95)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="#fbbf24">?</text>
+  </g>
+
+  <!-- Long Hair Back Flowing -->
+  <path d="M85 150 C70 210 75 290 85 330 C105 340 175 340 195 330 C205 290 210 210 195 150 Z" fill="#18181b"/>
+
+  <!-- Body / Torso (Pinkish Blouse) -->
+  <path d="M78 280 L78 375 L202 375 L202 280 C202 240 180 220 140 220 C100 220 78 240 78 280 Z" fill="url(#blouseGrad)" stroke="#fda4af" stroke-width="1.5"/>
+
+  <!-- Collar / Neckline -->
+  <polygon points="140,245 120,220 160,220" fill="#fff1f2"/>
+  <!-- Elegant Pearl Pendant -->
+  <line x1="130" y1="220" x2="140" y2="238" stroke="#fcd34d" stroke-width="1.5"/>
+  <line x1="150" y1="220" x2="140" y2="238" stroke="#fcd34d" stroke-width="1.5"/>
+  <circle cx="140" cy="240" r="4" fill="#ffffff" stroke="#f59e0b" stroke-width="1"/>
+
+  <!-- Slender Neck -->
+  <rect x="128" y="180" width="24" height="44" fill="#fde68a" rx="4"/>
+
+  <!-- Head / Face (Oval) -->
+  <ellipse cx="140" cy="145" rx="36" ry="44" fill="url(#skinGradF)" filter="url(#glowDropF)"/>
+
+  <!-- Hair Front Bangs & Strands -->
+  <path d="M96 130 C95 85 115 70 140 70 C168 70 185 85 184 130 C175 105 160 98 140 100 C120 98 105 105 96 130 Z" fill="#18181b"/>
+  <!-- Side strands flowing around face -->
+  <path d="M100 135 L96 220 L106 200 L110 150 Z" fill="#18181b"/>
+  <path d="M180 135 L184 220 L174 200 L170 150 Z" fill="#18181b"/>
+
+  <!-- Eyebrows (Alarmed / Worried slant) -->
+  <path d="M116 122 Q126 126 134 122" fill="none" stroke="#18181b" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M146 122 Q154 126 164 122" fill="none" stroke="#18181b" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Eyes (Wide with shock, pupils dilated) -->
+  <ellipse cx="125" cy="134" rx="6" ry="7" fill="#0f172a"/>
+  <circle cx="127" cy="132" r="2.5" fill="#ffffff"/>
+  <circle cx="123" cy="137" r="1.2" fill="#ffffff"/>
+
+  <ellipse cx="155" cy="134" rx="6" ry="7" fill="#0f172a"/>
+  <circle cx="157" cy="132" r="2.5" fill="#ffffff"/>
+  <circle cx="153" cy="137" r="1.2" fill="#ffffff"/>
+
+  <!-- Cute Eyelashes -->
+  <path d="M118 128 L114 124" stroke="#18181b" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M162 128 L166 124" stroke="#18181b" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Nose -->
+  <path d="M140 137 L138 148 L142 148" fill="none" stroke="#fb923c" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Worried / Anxious Mouth ("Hả?! Trừ tiền gì cơ?") -->
+  <ellipse cx="140" cy="164" rx="6" ry="8" fill="#e11d48"/>
+  <path d="M136 160 Q140 162 144 160" fill="#ffffff"/>
+
+  <!-- Sweat drop on forehead (Stress indicator) -->
+  <path d="M164 105 Q170 115 166 118 Q162 118 162 112 Z" fill="#38bdf8" opacity="0.9"/>
+
+  <!-- Rosy Cheeks -->
+  <ellipse cx="114" cy="148" rx="7" ry="4" fill="#fb7185" opacity="0.6"/>
+  <ellipse cx="166" cy="148" rx="7" ry="4" fill="#fb7185" opacity="0.6"/>
+
+  <!-- Right Arm holding Smartphone tightly to ear -->
+  <path d="M200 280 C215 250 225 200 198 155" fill="none" stroke="#fb7185" stroke-width="22" stroke-linecap="round"/>
+  
+  <!-- Smartphone in Hand (at ear) -->
+  <rect x="185" y="122" width="24" height="50" rx="6" fill="url(#phoneGradF)" stroke="#fbcfe8" stroke-width="2" transform="rotate(18 197 147)" filter="url(#glowDropF)"/>
+  <rect x="188" y="126" width="18" height="40" rx="4" fill="#f43f5e" opacity="0.75" transform="rotate(18 197 147)"/>
+
+  <!-- Hand fingers gripping phone -->
+  <ellipse cx="192" cy="158" rx="6" ry="4.5" fill="#fde68a" transform="rotate(18 192 158)"/>
+  <ellipse cx="190" cy="148" rx="6" ry="4.5" fill="#fde68a" transform="rotate(18 190 148)"/>
+  <ellipse cx="188" cy="138" rx="6" ry="4.5" fill="#fde68a" transform="rotate(18 188 138)"/>
+
+  <!-- Left Arm clutched to chest in worry -->
+  <path d="M80 280 Q65 240 105 235" fill="none" stroke="#fb7185" stroke-width="20" stroke-linecap="round"/>
+  <!-- Clutched Hand -->
+  <circle cx="110" cy="235" r="9" fill="#fde68a"/>
+  <ellipse cx="115" cy="232" rx="4" ry="7" fill="#fcd34d"/>
+
+  <!-- Sound Waves from Phone (Receiving alarming news) -->
+  <g transform="translate(215, 125)">
+    <path d="M0 5 Q12 18 0 30" fill="none" stroke="#f43f5e" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+    <path d="M8 0 Q24 18 8 36" fill="none" stroke="#f43f5e" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- Tag "NGƯỜI CHƠI (BẠN)" -->
+  <g transform="translate(25, 335)">
+    <rect x="0" y="0" width="230" height="32" rx="16" fill="#1e1b4b" stroke="#f43f5e" stroke-width="1.5" filter="url(#glowDropF)"/>
+    <circle cx="16" cy="16" r="6" fill="#10b981"/>
+    <text x="30" y="21" font-family="Arial, sans-serif" font-size="11" font-weight="900" fill="#ffffff" letter-spacing="0.5">NGƯỜI CHƠI (BẠN)</text>
+    <text x="188" y="21" font-family="Arial, sans-serif" font-size="12">📱</text>
+  </g>
+</svg>
