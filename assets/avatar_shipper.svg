@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="bgShipper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B00"/>
+      <stop offset="100%" stop-color="#CC4400"/>
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="48" fill="url(#bgShipper)"/>
+  <!-- Cap -->
+  <path d="M30 40 Q50 25 70 40 L78 43 Q50 35 22 43 Z" fill="#002242"/>
+  <ellipse cx="50" cy="40" rx="20" ry="12" fill="#002242"/>
+  <!-- Face -->
+  <circle cx="50" cy="52" r="16" fill="#FCD34D"/>
+  <!-- Eyes -->
+  <circle cx="44" cy="50" r="2.5" fill="#1E293B"/>
+  <circle cx="56" cy="50" r="2.5" fill="#1E293B"/>
+  <!-- Smile -->
+  <path d="M44 58 Q50 64 56 58" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+  <!-- Shirt -->
+  <path d="M26 84 C26 70 36 68 50 68 C64 68 74 70 74 84 Z" fill="#FF8800"/>
+  <!-- Parcel icon -->
+  <rect x="42" y="72" width="16" height="12" rx="2" fill="#FEF08A" stroke="#B45309" stroke-width="1"/>
+  <line x1="50" y1="72" x2="50" y2="84" stroke="#B45309" stroke-width="1"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="bgUser" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="92" height="92" rx="10" fill="url(#bgUser)" stroke="#FAD550" stroke-width="4"/>
+  <!-- Hair (Pixel style) -->
+  <path d="M26 40 C26 22 38 18 50 18 C62 18 74 22 74 40 C68 34 60 34 50 34 C40 34 32 34 26 40 Z" fill="#1E293B"/>
+  <!-- Face -->
+  <circle cx="50" cy="50" r="18" fill="#FDE68A"/>
+  <!-- Pixel Glasses -->
+  <rect x="36" y="46" width="12" height="8" rx="2" fill="#0F172A" stroke="#FAD550" stroke-width="1.5"/>
+  <rect x="52" y="46" width="12" height="8" rx="2" fill="#0F172A" stroke="#FAD550" stroke-width="1.5"/>
+  <rect x="48" y="49" width="4" height="2" fill="#FAD550"/>
+  <!-- Smile -->
+  <path d="M44 60 Q50 66 56 60" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Shirt -->
+  <path d="M24 88 C24 72 36 70 50 70 C64 70 76 72 76 88 Z" fill="#FAD550"/>
+  <!-- Shield Badge on chest -->
+  <polygon points="50,75 54,78 54,83 50,86 46,83 46,78" fill="#00539C"/>
+</svg>
