@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>G7 - Game Tương Tác Nhận Diện & Phòng Tránh Lừa Đảo Mạng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=52.0">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body>
+
+  <!-- ================= G7 FULLSCREEN LOADING SCREEN (NAVY & GOLD) ================= -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-bg-grid"></div>
+    <div class="loading-content">
+      <div class="loading-logo-wrap">
+        <div class="loading-logo-glow"></div>
+        <img src="assets/logo.svg" alt="G7 Logo" class="loading-logo-img">
+      </div>
+      
+      <h1 class="loading-title">G7</h1>
+      <div class="loading-subtitle">VỆ SĨ SỐ • PHÒNG CHỐNG LỪA ĐẢO TRỰC TUYẾN</div>
+      <p class="loading-desc">
+        Hệ thống mô phỏng tương tác tình huống lừa đảo qua tin nhắn. Rèn luyện phản xạ số, giải mã kỹ thuật thao túng tâm lý và bảo vệ tài khoản ngân hàng.
+      </p>
+
+      <!-- Thanh Loading (Tự động chạy ngay khi truy cập) -->
+      <div class="loading-bar-wrapper" id="loadingBarWrapper" style="display: block; margin-top: 20px;">
+        <div class="loading-meta">
+          <span class="loading-status-text" id="loadingStatusText">Đang khởi tạo hệ thống an toàn số G7...</span>
+          <span class="loading-percent-text" id="loadingPercentText">0%</span>
+        </div>
+        <div class="loading-bar-track">
+          <div class="loading-bar-fill" id="loadingBarFill" style="width: 0%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CITIZEN IDENTITY CARD / CHARACTER SELECTION MODAL ================= -->
+  <div class="game-modal" id="characterSelectModal">
+    <div class="char-select-container">
+      <div class="char-select-header">
+        <div class="char-badge-tag" id="charSelectBadge">HỆ THỐNG ĐỊNH DANH CÔNG DÂN G7</div>
+        <h2 class="char-select-title" id="charSelectTitle">CHỌN <span>DANH TÍNH NHẬP VAI</span></h2>
+        <p class="char-select-desc" id="charSelectDesc">
+          Lựa chọn một công dân dưới đây để rèn luyện kỹ năng phòng thủ số, bảo vệ thông tin CCCD và tài khoản ngân hàng.
+        </p>
+        <div class="cccd-spec-badge">📐 Quy chuẩn CCCD: 85,6 mm × 53,98 mm • Dày 0,76 mm • Góc bo r = 3,18 mm • Ảnh 20 × 30 mm</div>
+      </div>
+
+      <div class="char-cards-grid" id="charCardsGrid">
+        
+        <!-- THẺ CĂN CƯỚC NỮ: NGUYỄN NGỌC ÁNH -->
+        <div class="char-card-wrap" id="wrapFemale">
+          <div class="cccd-card female-card" id="cardFemale">
+            <div class="cccd-inner">
+              <div class="cccd-header-row">
+                <div class="cccd-emblem-badge"><svg class="cccd-emblem-svg" viewBox="0 0 36 36" width="30" height="30" style="display:block; flex-shrink:0;"><circle cx="18" cy="18" r="17" fill="#DA251D" stroke="#FFCD00" stroke-width="1.5"/><polygon points="18,5.5 21.6,14.6 31,14.8 23.4,20.6 26.2,29.8 18,24.3 9.8,29.8 12.6,20.6 5,14.8 14.4,14.6" fill="#FFCD00"/></svg></div>
+                <div class="cccd-titles">
+                  <div class="cccd-nation">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
+                  <div class="cccd-motto">Độc lập - Tự do - Hạnh phúc</div>
+                  <div class="cccd-type-title">CĂN CƯỚC CÔNG DÂN / <span>Identity Card</span></div>
+                </div>
+              </div>
+
+              <div class="cccd-body">
+                <div class="cccd-col-left">
+                  <div class="cccd-photo-frame">
+                    <img src="assets/avatar_female.png?v=29.0" alt="Nguyễn Ngọc Ánh" class="cccd-avatar-img">
+                  </div>
+                  <div class="cccd-chip-box" title="Chip vi mạch điện tử bảo mật">
+                    <div class="cccd-chip-pattern"></div>
+                  </div>
+                </div>
+
+                <div class="cccd-col-right">
+                  <div class="cccd-field-row id-number-row">
+                    <span class="cccd-lbl">Số / No.:</span>
+                    <span class="cccd-val id-number">094306006781</span>
+                  </div>
+
+                  <div class="cccd-field-row">
+                    <span class="cccd-lbl">Họ và tên:</span>
+                    <span class="cccd-val name-val">NGUYỄN NGỌC ÁNH</span>
+                  </div>
+
+                  <div class="cccd-two-cols">
+                    <div class="cccd-field-row">
+                      <span class="cccd-lbl">Ngày sinh:</span>
+                      <span class="cccd-val">17/12/2002</span>
+                    </div>
+                    <div class="cccd-field-row">
+                      <span class="cccd-lbl">Tuổi:</span>
+                      <span class="cccd-val highlight-age">24 tuổi</span>
+                    </div>
+                  </div>
+
+                  <div class="cccd-two-cols">
+                    <div class="cccd-field-row">
+                      <span class="cccd-lbl">Giới tính:</span>
+                      <span class="cccd-val">Nữ</span>
+                    </div>
+                    <div class="cccd-field-row">
+                      <span class="cccd-lbl">Quốc tịch:</span>
+                      <span class="cccd-val">Việt Nam</span>
+                    </div>
+                  </div>
+
+                  <div class="cccd-field-row">
+                    <span class="cccd-lbl">Quê quán:</span>
+                    <span class="cccd-val">An Bình, Ninh Kiều, Cần Thơ</span>
+                  </div>
+
+                  <div class="cccd-divider-dashed"></div>
+
+                  <div class="cccd-field-row">
+                    <span class="cccd-lbl">Nghề nghiệp:</span>
+                    <span class="cccd-val job-tag">Nghề nghiệp tự do</span>
+                  </div>
+
+                  <div class="cccd-field-row phone-row">
+                    <span class="cccd-lbl">Số ĐT:</span>
+                    <span class="cccd-val phone-val">03970866321</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn-select-char btn-female-action" id="btnSelectFemale" type="button">
+            👉 CHỌN NỮ: NGỌC ÁNH
+          </button>
+        </div>
+
+        <!-- THẺ CĂN CƯỚC NAM: PHAN THANH TUẤN -->
+        <div class="char-card-wrap" id="wrapMale">
+          <div class="cccd-card male-card" id="cardMale">
+            <div class="cccd-inner">
+              <div class="cccd-header-row">
+                <div class="cccd-emblem-badge"><svg class="cccd-emblem-svg" viewBox="0 0 36 36" width="30" height="30" style="display:block; flex-shrink:0;"><circle cx="18" cy="18" r="17" fill="#DA251D" stroke="#FFCD00" stroke-width="1.5"/><polygon points="18,5.5 21.6,14.6 31,14.8 23.4,20.6 26.2,29.8 18,24.3 9.8,29.8 12.6,20.6 5,14.8 14.4,14.6" fill="#FFCD00"/></svg></div>
+                <div class="cccd-titles">
+                  <div class="cccd-nation">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
+                  <div class="cccd-motto">Độc lập - Tự do - Hạnh phúc</div>
+                  <div class="cccd-type-title">CĂN CƯỚC CÔNG DÂN / <span>Identity Card</span></div>
+                </div>
+              </div>
+
+              <div class="cccd-body">
+                <div class="cccd-col-left">
+                  <div class="cccd-photo-frame">
+                    <img src="assets/avatar_male.png?v=29.0" alt="Phan Thanh Tuấn" class="cccd-avatar-img">
+                  </div>
+                  <div class="cccd-chip-box" title="Chip vi mạch điện tử bảo mật">
+                    <div class="cccd-chip-pattern"></div>
+                  </div>
+                </div>
+
+                <div class="cccd-col-right">
+                  <div class="cccd-field-row id-number-row">
+                    <span class="cccd-lbl">Số / No.:</span>
+                    <span class="cccd-val id-number">094306016722</span>
+                  </div>
+
+                  <div class="cccd-field-row">
+                    <span class="cccd-lbl">Họ và tên:</span>
+                    <span class="cccd-val name-val">PHAN THANH TUẤN</span>
+                  </div>
+
+                  <div class="cccd-two-cols">
+                    <div class="cccd-field-row">
+                      <span class="cccd-lbl">Ngày sinh:</span>
+                      <span class="cccd-val">10/01/2004</span>
+                    </div>
+                    <div class="cccd-field-row">
+                      <span class="cccd-lbl">Tuổi:</span>
+                      <span class="cccd-val highlight-age">22 tuổi</span>
+                    </div>
+                  </div>
+
+                  <div class="cccd-two-cols">
+                    <div class="cccd-field-row">
+                      <span class="cccd-lbl">Giới tính:</span>
+                      <span class="cccd-val">Nam</span>
+                    </div>
+                    <div class="cccd-field-row">
+                      <span class="cccd-lbl">Quốc tịch:</span>
+                      <span class="cccd-val">Việt Nam</span>
+                    </div>
+                  </div>
+
+                  <div class="cccd-field-row">
+                    <span class="cccd-lbl">Quê quán:</span>
+                    <span class="cccd-val">Ô Môn, Cần Thơ</span>
+                  </div>
+
+                  <div class="cccd-divider-dashed"></div>
+
+                  <div class="cccd-field-row">
+                    <span class="cccd-lbl">Nghề nghiệp:</span>
+                    <span class="cccd-val job-tag">Sinh viên</span>
+                  </div>
+
+                  <div class="cccd-field-row phone-row">
+                    <span class="cccd-lbl">Số ĐT:</span>
+                    <span class="cccd-val phone-val">09470337112</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn-select-char btn-male-action" id="btnSelectMale" type="button">
+            👉 CHỌN NAM: THANH TUẤN
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Khung hành động khi đã có danh tính (chỉ hiện thẻ đã chọn) -->
+      <div class="char-chosen-actions" id="charChosenActions" style="display: none; text-align: center; margin-top: 18px;">
+        <button class="btn-collect-action" id="btnContinueWithChosenChar" type="button" style="padding: 12px 28px; font-size: 1rem; width: auto; margin-bottom: 10px; display: inline-block;">
+          ▶ TIẾP TỤC VỚI DANH TÍNH NÀY ➔
+        </button>
+        <div>
+          <button id="btnSwitchCharPrompt" type="button" style="background: none; border: none; color: #FAD550; font-size: 0.82rem; cursor: pointer; text-decoration: underline;">
+            🔄 Đổi sang nhân vật khác
+          </button>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 16px;">
+        <button class="nav-btn" id="btnCloseCharSelect" type="button" style="display: none;">
+          ✕ Đóng thẻ Căn Cước
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= INITIAL 80M VND COLLECT MODAL ================= -->
+  <div class="game-modal" id="collectInitialModal">
+    <div class="collect-modal-card">
+      <div class="collect-gift-glow"></div>
+      <div class="collect-gift-icon">💰</div>
+      <h2 class="collect-title">CẤP VỐN</h2>
+      <div class="collect-amount-box">
+        <span class="collect-amount-num">80.000.000</span>
+        <span class="collect-amount-unit">VNĐ</span>
+      </div>
+
+      <button class="btn-collect-action" id="btnCollectInitialAction" type="button">
+        COLLECT
+      </button>
+      <div style="margin-top: 12px;">
+        <button id="btnBackToCharSelectFromCollect" type="button" style="background: none; border: none; color: #FAD550; font-size: 0.82rem; cursor: pointer; text-decoration: underline;">
+          ❮ Chọn lại danh tính Căn Cước (CCCD)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= G7 LEVEL SELECTION SCREEN (NAVY & GOLD) ================= -->
+  <div class="level-select-modal" id="levelSelectModal">
+    <div class="arcade-select-wrapper">
+      
+      <!-- Top Action Bar (Reference Image Style: Left Round < Button, Center Balance, Right Calendar & Close X) -->
+      <div class="arcade-topbar">
+        <button class="arcade-top-circle-btn" id="btnLevelBackCircle" type="button" title="Quay lại">
+          <span>&lt;</span>
+        </button>
+
+        <div class="arcade-topbar-money" id="levelTopbarMoney" title="Bấm dấu cộng [+] để xem video nhận 1 triệu VNĐ">
+          <span class="level-money-icon">🏦</span>
+          <span class="level-money-val" id="levelScreenBalanceVal">80.000.000</span>
+          <span class="level-money-unit">đ</span>
+          <button class="level-money-add-btn" id="btnLevelScreenAddMoney" type="button" title="Xem video nhận 1.000.000 VNĐ">➕</button>
+        </div>
+
+        <div class="arcade-top-actions">
+          <button class="arcade-top-circle-btn" id="btnCloseLevelSelect" type="button" title="Đóng màn hình chọn Level">
+            <span>✕</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Retro Title Matching Reference Image: SELECT LEVEL with Cyan text and Pink/Magenta 3D Drop Shadow -->
+      <div class="arcade-title-section">
+        <h2 class="arcade-select-title">SELECT LEVEL</h2>
+      </div>
+
+      <!-- Main Blue Board Panel ("Nền Màu Xanh" with Pixel Staircase Corners) -->
+      <div class="pixel-board-frame">
+        <div class="pixel-blue-board">
+          <!-- 2x2 Grid of Pure Pixel Circles: Level 1, 2, 3, 4 (No explanations, only pure pixel circles) -->
+          <div class="arcade-pixel-grid" id="levelGridContainer">
+            <!-- Dynamically generated pixel circles -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Action Utilities -->
+      <div class="arcade-bottom-toolbar">
+        <button class="arcade-util-pill" id="btnLevelOpenCCCD" type="button">
+          🪪 Căn Cước
+        </button>
+        <button class="arcade-util-pill" id="btnLevelSoundToggle" type="button">
+          🔊 Âm thanh: Bật
+        </button>
+        <button class="arcade-util-pill" id="btnLevelSplashBack" type="button" title="Quay lại màn hình khởi động (Reset)">
+          🔄 Reset
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Top Navigation & Global Controls -->
+  <header class="top-navbar" id="topNavbar" style="display: none;">
+    <div class="brand-wrapper">
+      <img src="assets/logo.svg" alt="G7 Logo" class="brand-logo">
+      <div class="brand-info">
+        <h1>G7 <span>• Vệ Sĩ Số</span></h1>
+        <div class="brand-tagline">Cyber Scam Defense Simulator</div>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <button id="soundToggleBtn" class="nav-btn active" title="Bật/Tắt âm thanh">
+        <span class="icon">🔊</span> Âm thanh: Bật
+      </button>
+
+      <button id="restartBtn" class="nav-btn" title="Chơi lại tình huống hiện tại">
+        🔄 Chơi Lại
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Game Container (Ẩn mặc định, chỉ hiện khi đã chọn Level) -->
+  <main class="main-wrapper" id="mainWrapper" style="display: none;">
+    <!-- Nút mũi tên Back ẩn để giữ compatibility -->
+    <button class="in-game-floating-back" id="btnInGameFloatingBack" type="button" title="Quay lại danh sách Level" style="display: none;"></button>
+
+    <div class="game-workspace-container" id="gameWorkspaceContainer">
+      
+      <!-- ================= NHÂN VẬT GỌI ĐIỆN BÊN TRÁI (TỔNG ĐÀI VIETBANK) ================= -->
+      <aside class="call-side-panel call-side-left" id="callSideLeft" style="display: none;">
+        <div class="call-card-badge">
+          <span class="call-badge-dot"></span>
+          <span id="callLeftBadgeText">TỔNG ĐÀI VIETBANK</span>
+        </div>
+        
+        <div class="call-char-illustration-wrap" id="callLeftCharWrap">
+          <img class="call-char-full-img" id="callLeftAvatar" src="assets/lv2_tong_dai.svg" alt="Tổng Đài VietBank (+024)">
+        </div>
+
+        <div class="call-char-details">
+          <h3 class="call-char-name" id="callLeftName">Hoàng - Tổng Đài Viên</h3>
+          <div class="call-char-phone" id="callLeftPhone">+024.3938.8888</div>
+          <div class="call-char-org" id="callLeftOrg">Trung Tâm Giám Sát Thẻ VietBank</div>
+        </div>
+
+        <div class="call-soundwaves" id="callLeftWaves">
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+        </div>
+
+        <div class="call-speaker-status" id="callLeftStatus">
+          <span class="status-icon">🎙️</span>
+          <span class="status-text">Đang nói chuyện...</span>
+        </div>
+
+        <div class="call-side-note" id="callLeftNote">
+          ⚠️ Giả mạo đầu số VoIP tổng đài ngân hàng để thao túng tâm lý
+        </div>
+      </aside>
+
+      <!-- ================= KHUNG CHAT TRỰC TIẾP (BỎ HOÀN TOÀN KHUNG ĐIỆN THOẠI) ================= -->
+      <div class="chat-main-container phone-frame" id="phoneFrame">
+        <div class="phone-inner" id="phoneScreen">
+
+          <!-- Chat Header: Nút Back, Thông tin Người gửi & 2 Nút mở nhanh STK / CCCD -->
+          <div class="chat-header">
+            <div class="chat-header-left">
+              <button class="header-back-btn" id="btnChatHeaderBack" type="button" title="Về màn hình chọn Level">
+                <span class="home-icon">🏠</span>
+              </button>
+              <div class="header-avatar-wrap">
+                <img class="header-avatar" id="chatHeaderAvatar" src="assets/avatar_scammer.png" alt="Avatar">
+                <span class="avatar-online-dot" id="headerOnlineDot" title="Đang trực tuyến"></span>
+              </div>
+              <div class="header-user-info">
+                <span class="header-name" id="chatHeaderName">CSKH Sàn TMĐT</span>
+                <span class="header-status" id="chatHeaderStatus">Đang hoạt động</span>
+              </div>
+            </div>
+            
+            <!-- 2 Nút mở/ẩn nhanh STK và CCCD trên góc phải header chat -->
+            <div class="chat-header-quick-dock" id="outsideDashboardPanel">
+              <div class="quick-bank-cluster">
+                <button class="outside-dock-btn header-quick-btn" id="btnToggleBankCard" type="button" title="Bấm để xem Số dư và STK">
+                  <span class="dock-btn-icon">🏦</span>
+                  <span class="dock-btn-val" id="dockBankBalanceVal">80.000.000 VNĐ</span>
+                  <span class="dock-btn-chevron" id="dockBankChevron">▼</span>
+                </button>
+                <button class="header-plus-btn" id="btnChatHeaderAddMoney" type="button" title="Bấm dấu cộng [+] để xem video nhận 1 triệu VNĐ (Tối đa 3 lần/ngày)">➕</button>
+              </div>
+              <button class="outside-dock-btn header-quick-btn" id="btnToggleCccdCard" type="button" title="Bấm để xem Thẻ Căn Cước">
+                <span class="dock-btn-icon">🪪</span>
+                <span class="dock-btn-val" id="dockCccdNameVal">Nguyễn Ngọc Ánh</span>
+                <span class="dock-btn-chevron" id="dockCccdChevron">▼</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Thanh hiển thị cuộc gọi VoIP đang diễn ra (Desktop & Tablet) -->
+          <div class="active-call-bar" id="activeCallBar" style="display: none;">
+            <div class="call-bar-left">
+              <span class="call-pulse-dot"></span>
+              <span class="call-bar-label">🔴 ĐANG TRONG CUỘC GỌI VOIP: <strong>+024.3938.8888 ⇄ <span id="callBarUserName">Nguyễn Ngọc Ánh</span></strong></span>
+            </div>
+            <div class="call-bar-timer" id="activeCallTimer">00:00</div>
+          </div>
+
+          <!-- Dải hiển thị 2 nhân vật nghe gọi đối thoại trên màn hình điện thoại (Mobile) -->
+          <div class="mobile-call-dual-view" id="mobileCallDualView" style="display: none;">
+            <div class="mobile-caller-card left">
+              <div class="mobile-call-avatar-wrap">
+                <img id="mobileCallerAvatarLeft" src="assets/char_scammer_call.svg" alt="Người Hại - Kẻ lừa đảo">
+                <span class="mobile-call-badge">📞</span>
+              </div>
+              <div class="mobile-caller-info">
+                <span class="mobile-caller-role" style="font-size:0.6rem; color:#ef4444; font-weight:800; text-transform:uppercase;">NGƯỜI HẠI</span>
+                <span class="mobile-caller-name" id="mobileCallerNameLeft">Hoàng (VietBank)</span>
+                <span class="mobile-call-sub">+024.3938.8888</span>
+              </div>
+            </div>
+
+            <div class="mobile-call-center">
+              <div class="mobile-call-badge-center">ĐANG GỌI</div>
+              <div class="mobile-call-timer" id="mobileCallTimer">00:00</div>
+              <div class="mobile-call-waves">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <div class="mobile-caller-card right">
+              <div class="mobile-call-avatar-wrap">
+                <img id="mobileCallerAvatarRight" src="assets/char_victim_female_call.svg" alt="Người Bị Hại - Người Chơi">
+                <span class="mobile-call-badge">📱</span>
+              </div>
+              <div class="mobile-caller-info">
+                <span class="mobile-caller-role" style="font-size:0.6rem; color:#10b981; font-weight:800; text-transform:uppercase;">NGƯỜI BỊ HẠI</span>
+                <span class="mobile-caller-name" id="mobileCallerNameRight">Nguyễn Ngọc Ánh</span>
+                <span class="mobile-call-sub">Đang nghe máy</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-warning-banner" style="display: none !important; visibility: hidden !important; height: 0 !important; margin: 0 !important; padding: 0 !important; border: none !important; overflow: hidden !important;">
+            <span id="chatHeaderWarning" style="display: none !important;"></span>
+          </div>
+
+        <!-- 3 CHỈ SỐ GAMEPLAY (Niềm tin - Rủi ro dữ liệu - Thiệt hại tài chính) -->
+        <div class="game-hud-triad" id="gameHudTriad">
+          <!-- 1. Niềm tin của người chơi -->
+          <div class="hud-stat-card trust-card" id="hudTrustCard" title="Mức độ tin tưởng đối tượng tự xưng nhân viên sàn TMĐT">
+            <div class="hud-stat-top">
+              <span class="hud-stat-icon">🤝</span>
+              <span class="hud-stat-title">Niềm Tin:</span>
+              <span class="hud-stat-number" id="hudTrustVal">20%</span>
+            </div>
+            <div class="hud-stat-bar-track">
+              <div class="hud-stat-bar-fill trust-fill" id="hudTrustFill" style="width: 20%;"></div>
+            </div>
+          </div>
+
+          <!-- 2. Rủi ro dữ liệu -->
+          <div class="hud-stat-card risk-card" id="hudRiskCard" title="Mức độ thông tin cá nhân đã bị tiết lộ (CCCD, OTP, Ảnh)">
+            <div class="hud-stat-top">
+              <span class="hud-stat-icon">🛡️</span>
+              <span class="hud-stat-title">Rủi Ro Dữ Liệu:</span>
+              <span class="hud-stat-number" id="hudRiskVal">An toàn (0%)</span>
+            </div>
+            <div class="hud-stat-bar-track">
+              <div class="hud-stat-bar-fill risk-fill" id="hudRiskFill" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <!-- 3. Thiệt hại tài chính -->
+          <div class="hud-stat-card loss-card" id="hudLossCard" title="Số tiền người chơi đã chuyển cho đối tượng">
+            <div class="hud-stat-top">
+              <span class="hud-stat-icon">💸</span>
+              <span class="hud-stat-title">Đã Chuyển:</span>
+              <span class="hud-stat-number" id="hudLossVal">0 VNĐ</span>
+            </div>
+            <div class="hud-stat-bar-track">
+              <div class="hud-stat-bar-fill loss-fill" id="hudLossFill" style="width: 0%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat Messages Stream -->
+        <div class="chat-stream" id="chatMessages">
+          <!-- Dynamic chat messages go here -->
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="typing-row" id="typingIndicator">
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+          <span class="typing-label" id="typingLabel">Đang soạn tin nhắn...</span>
+        </div>
+
+        <!-- Interactive Choices Dock -->
+        <div class="choices-dock">
+          <div class="choices-status-label" id="choicesStatus">👉 LỰA CHỌN PHẢN HỒI CỦA BẠN:</div>
+          <div class="choices-list" id="choicesContainer">
+            <!-- Dynamic choice buttons go here -->
+          </div>
+          <button class="btn-rewind-decision" id="btnRewindDecision" type="button" style="display: none;">
+            ↩️ Quay Lại Điểm Quyết Định Trước (Thử Lựa Chọn Khác)
+          </button>
+        </div>
+
+        <!-- ================= MODALS & MINI-APPS ================= -->
+
+        <!-- 1. Simulated Phishing Browser Modal -->
+        <div class="game-modal" id="phishingModal">
+          <div class="browser-window">
+            <div class="browser-bar">
+              <div class="browser-url-pill">
+                <span>🔒❌</span>
+                <span class="browser-url-text">http://tmdt-nhanthuong-xesh125i.online/tra-cuu</span>
+              </div>
+            </div>
+            <div class="browser-body">
+              <div class="fake-site-header">
+                <div class="fake-logo">🎁 SÀN TMĐT TRI ÂN KHÁCH HÀNG 2026</div>
+                <div style="font-size: 0.72rem; color: #64748b;">Cổng tra cứu & nộp thuế trước bạ nhận xe Honda SH 125i</div>
+              </div>
+
+              <div class="phish-warning-box" id="phishWarningNotice">
+                <!-- Dynamically filled with educational warning -->
+              </div>
+
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; margin-bottom: 12px;">
+                <div style="font-weight: 700; font-size: 0.8rem; margin-bottom: 4px;">Thông tin giải thưởng #SH-2026-98241</div>
+                <div style="font-size: 0.75rem; color: #475569;">Giải thưởng: <strong>Xe máy Honda SH 125i (Trị giá 85.000.000 VNĐ)</strong></div>
+                <div style="font-size: 0.75rem; color: #dc2626;">Phí thuế trước bạ cần nộp: <strong>5.000.000 VNĐ</strong></div>
+              </div>
+
+              <div class="fake-form-group">
+                <label>Số điện thoại người nhận:</label>
+                <input type="text" class="fake-input" value="039****321" readonly>
+              </div>
+
+              <div class="fake-form-group">
+                <label>Chọn Ngân hàng thanh toán trực tuyến:</label>
+                <select class="fake-input">
+                  <option>Vietcombank (VCB Digibank)</option>
+                  <option>MBBank (App Ngân Hàng Quân Đội)</option>
+                  <option>Techcombank Mobile</option>
+                  <option>VPBank NEO</option>
+                </select>
+              </div>
+
+              <div class="fake-form-group">
+                <label>Tên đăng nhập / Số tài khoản:</label>
+                <input type="text" class="fake-input" placeholder="Nhập số tài khoản hoặc SĐT">
+              </div>
+
+              <button class="btn-primary-danger" id="phishPaySubmitBtn">
+                Xác Nhận & Nộp Thuế Trước Bạ 5.000.000đ
+              </button>
+              <button class="btn-secondary" id="phishCloseBtn">
+                Quay Lại Cuộc Trò Chuyện Chat (Đóng Web)
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Simulated Official App Checker Modal -->
+        <div class="game-modal" id="officialAppModal">
+          <div class="modal-content official-app-card">
+            <div class="official-app-header">
+              <div class="app-icon" style="background:#e02424; color:#fff;">TMĐT</div>
+              <div>
+                <h3>Ứng Dụng Sàn TMĐT Chính Thức</h3>
+                <p>Tra cứu sự kiện tri ân & giải thưởng độc lập</p>
+              </div>
+            </div>
+
+            <div class="search-result-box">
+              <div class="res-not-found">❌ Không tìm thấy thông báo trúng thưởng</div>
+              <div class="res-desc">
+                Hệ thống máy chủ Sàn TMĐT không ghi nhận bất kỳ thông báo trúng thưởng xe máy SH nào liên kết với tài khoản hoặc số điện thoại của bạn.<br><br>
+                📢 <strong>CẢNH BÁO TỪ BỘ PHẬN AN NINH:</strong> Hiện nay xuất hiện nhiều đối tượng giả mạo CSKH sàn TMĐT thông báo trúng thưởng xe SH qua SMS và yêu cầu kết bạn Zalo đóng phí trước bạ để chiếm đoạt tài sản. Sàn tuyệt đối không thu phí trước bạ qua Zalo hay tài khoản cá nhân.
+              </div>
+            </div>
+
+            <button class="btn-secondary" id="officialAppCloseBtn" style="background: #002242; color: #ffffff;">
+              Đã Rõ - Quay Lại Chat Đối Chất ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Simulated Phone Call Modal -->
+        <div class="game-modal" id="callModal">
+          <div class="call-screen">
+            <div>
+              <img class="call-avatar" src="assets/avatar_friend.svg" alt="Friend Call">
+              <div class="call-name">Tuấn Anh (Bạn Thân)</div>
+              <div class="call-status">Đang kết nối qua sim di động... 00:04</div>
+            </div>
+
+            <div class="call-dialogue-box">
+              <strong>Tuấn Anh:</strong> "Alo mày hả? Nghe tao nói này! Nick Zalo tao vừa bị hack lúc tối, thằng nào đang đi nhắn tin mượn tiền khắp cả danh bạ của tao đấy, may mà mày gọi điện hỏi tao chứ không mất tiền rồi!"
+            </div>
+
+            <button class="btn-hangup" id="callHangupBtn" title="Kết thúc cuộc gọi">
+              📞
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Decision Tree Modal (Sơ Đồ Cây Phân Nhánh Quyết Định) -->
+        <div class="game-modal" id="treeModal">
+          <div class="modal-content tree-modal-content">
+            <div class="tree-modal-header">
+              <div class="tree-header-info">
+                <div class="tree-badge">🌳 HỆ THỐNG PHÂN NHÁNH QUYẾT ĐỊNH</div>
+                <h3 class="tree-title" id="treeGraphTitle">Sơ Đồ Cây Quyết Định: Cú Lừa Chồng Kịch Bản</h3>
+                <div class="tree-subtitle" id="treeGraphSubtitle">Theo dõi toàn bộ 6 giai đoạn, các ngã rẽ và 5 kết thúc phân nhánh</div>
+              </div>
+              <div class="tree-header-controls">
+                <button class="tree-ctrl-btn" id="btnTreeZoomIn" type="button" title="Phóng to sơ đồ">➕ Phóng to</button>
+                <button class="tree-ctrl-btn" id="btnTreeZoomOut" type="button" title="Thu nhỏ sơ đồ">➖ Thu nhỏ</button>
+                <button class="tree-ctrl-btn" id="btnTreeZoomReset" type="button" title="Đặt lại góc nhìn">⟲ Mặc định</button>
+                <button class="tree-close-btn" id="treeModalCloseBtn" type="button" title="Đóng sơ đồ">✕</button>
+              </div>
+            </div>
+
+            <!-- Thanh chú thích màu sắc (Legend) -->
+            <div class="tree-legend-bar">
+              <div class="tree-legend-item">
+                <span class="legend-dot green"></span>
+                <span>An toàn / Đúng đắn</span>
+              </div>
+              <div class="tree-legend-item">
+                <span class="legend-dot yellow"></span>
+                <span>Rủi ro / Bẫy tâm lý</span>
+              </div>
+              <div class="tree-legend-item">
+                <span class="legend-dot red"></span>
+                <span>Nguy hiểm / Sập bẫy</span>
+              </div>
+              <div class="tree-legend-item">
+                <span class="legend-ring gold"></span>
+                <span>Đường đi bạn đã chọn (Viền vàng sáng)</span>
+              </div>
+            </div>
+
+            <!-- Vùng hiển thị sơ đồ cây -->
+            <div class="tree-canvas-viewport" id="treeViewport">
+              <div class="tree-canvas-inner" id="treeGraphContent">
+                <!-- Dynamically rendered -->
+              </div>
+            </div>
+
+            <!-- Bảng Chi Tiết Nút Quyết Định (Node Inspector Card) -->
+            <div class="tree-node-inspector" id="treeNodeInspector" style="display: none;">
+              <div class="inspector-header">
+                <span class="inspector-badge" id="inspStageBadge">GIAI ĐOẠN 1</span>
+                <span class="inspector-type-badge" id="inspTypeBadge">AN TOÀN</span>
+                <button class="inspector-close-btn" id="btnCloseInspector" type="button">✕</button>
+              </div>
+              <h4 class="inspector-title" id="inspChoiceTitle">Tên quyết định</h4>
+              <div class="inspector-situation" id="inspSituationBox"><strong>Bối cảnh:</strong> <span id="inspSituationText">...</span></div>
+              <div class="inspector-choice" id="inspChoiceBox"><strong>Lựa chọn của bạn:</strong> <span id="inspChoiceText">...</span></div>
+              <div class="inspector-analysis-grid">
+                <div class="insp-col">
+                  <div class="insp-lbl">🔍 Phân tích rủi ro / Vì sao:</div>
+                  <div class="insp-txt" id="inspAnalysisText">...</div>
+                </div>
+                <div class="insp-col">
+                  <div class="insp-lbl">🧠 Bẫy tâm lý:</div>
+                  <div class="insp-txt" id="inspTrapText">...</div>
+                </div>
+              </div>
+              <div class="inspector-lesson-bar" id="inspLessonBox">
+                💡 <strong>Bài học:</strong> <span id="inspLessonText">...</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 5. Case Summary Modal (Ending Tối Giản: % Bị lừa / Không bị lừa, Số tiền bị lừa, Chơi lại, Next Level) -->
+        <div class="game-modal" id="summaryModal">
+          <div class="modal-content summary-container summary-minimal">
+            
+            <!-- Header Tối Giản: Badge Trạng Thái + Tiêu Đề -->
+            <div class="summary-header" style="margin-bottom: 12px;">
+              <div class="summary-ending-game-badge" id="summaryEndingBanner">🏁 HOÀN THÀNH LEVEL</div>
+              <h2 class="summary-title" id="summaryTitle" style="margin: 6px 0 2px 0;">BẬC THẦY CẢNH GIÁC MẠNG</h2>
+              <div class="summary-badges-row">
+                <span class="summary-tag" id="summaryEndingTag">CASE COMPLETED</span>
+                <span class="summary-badge-pill" id="summaryBadge">XỬ LÝ XUẤT SẮC</span>
+              </div>
+            </div>
+
+            <!-- 1. BẢNG TỶ LỆ: PHẦN TRĂM BỊ LỪA / KHÔNG BỊ LỪA -->
+            <div class="eval-percent-summary-grid" style="margin: 10px 0 12px 0;">
+              <!-- Cột Không Bị Lừa -->
+              <div class="eval-pct-card good-card">
+                <div class="eval-pct-header">
+                  <span class="eval-pct-icon">🛡️</span>
+                  <span class="eval-pct-label">KHÔNG BỊ LỪA</span>
+                </div>
+                <div class="eval-pct-value" id="summaryGoodPct">100%</div>
+                <div class="eval-pct-bar-wrap">
+                  <div class="eval-pct-bar good" id="summaryGoodBar" style="width: 100%;"></div>
+                </div>
+                <div class="eval-pct-subtext" id="summaryGoodSubtext">Tỉnh táo an toàn</div>
+              </div>
+
+              <!-- Cột Bị Lừa -->
+              <div class="eval-pct-card bad-card">
+                <div class="eval-pct-header">
+                  <span class="eval-pct-icon">⚠️</span>
+                  <span class="eval-pct-label">BỊ LỪA</span>
+                </div>
+                <div class="eval-pct-value" id="summaryBadPct">0%</div>
+                <div class="eval-pct-bar-wrap">
+                  <div class="eval-pct-bar bad" id="summaryBadBar" style="width: 0%;"></div>
+                </div>
+                <div class="eval-pct-subtext" id="summaryBadSubtext">Rủi ro sập bẫy</div>
+              </div>
+            </div>
+
+            <!-- 2. SỐ TIỀN BỊ LỪA -->
+            <div class="minimal-loss-card" id="summaryLossCard">
+              <div class="minimal-loss-icon">💸</div>
+              <div class="minimal-loss-info">
+                <div class="minimal-loss-label">SỐ TIỀN BỊ LỪA</div>
+                <div class="minimal-loss-value" id="summaryLossValue">0 VNĐ</div>
+              </div>
+            </div>
+
+            <!-- BẢNG ĐÁNH GIÁ ĐẶC BIỆT LEVEL 4: 100 ĐIỂM & 3 LỚP XÁC THỰC -->
+            <div id="level4SummaryContainer" style="display: none; margin-top: 10px;"></div>
+
+            <!-- NÚT XEM SƠ ĐỒ CÂY PHÂN NHÁNH QUYẾT ĐỊNH -->
+            <div class="summary-tree-btn-wrap" id="summaryTreeBtnWrap" style="margin: 12px 0 8px 0;">
+              <button class="btn-summary-tree" id="summaryShowTreeBtnActive" type="button">
+                🗺️ XEM SƠ ĐỒ CÂY PHÂN NHÁNH QUYẾT ĐỊNH ➔
+              </button>
+            </div>
+
+            <!-- 3. HAI NÚT HÀNH ĐỘNG DUY NHẤT: CHƠI LẠI VÀ NEXT LEVEL -->
+            <div class="summary-minimal-actions">
+              <button class="btn-minimal-replay" id="summaryReplayBtn" type="button">
+                🔄 Chơi Lại
+              </button>
+              <button class="btn-minimal-next" id="summaryNextChapterBtn" type="button">
+                Next Level ➔
+              </button>
+            </div>
+
+            <!-- Các phần tử ẩn phục vụ tương thích code cũ (nếu có tham chiếu) -->
+            <div style="display: none !important;">
+              <span id="summaryScoreCardLabel"></span>
+              <span id="summaryScoreValue"></span>
+              <span id="summaryScoreBar"></span>
+              <span id="sumTrustVal"></span>
+              <span id="sumRiskVal"></span>
+              <span id="sumLossVal"></span>
+              <div id="summaryConclusion"></div>
+              <div id="summaryWarningBox"><span id="summaryWarningSignsText"></span></div>
+              <div id="summaryLesson"></div>
+              <span id="badgeGoodPct"></span>
+              <span id="badgeBadPct"></span>
+              <ul id="summaryGoodActions"></ul>
+              <ul id="summaryBadActions"></ul>
+              <button id="summaryShowTreeBtn"></button>
+              <button id="summaryOpenOverallBtn"></button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 6. Overall Game Summary Modal (Tối Giản) -->
+        <div class="game-modal" id="overallModal">
+          <div class="modal-content summary-container summary-minimal">
+            <div class="summary-header">
+              <div class="summary-ending-game-badge" style="background: linear-gradient(90deg, #1e3a8a, #0284c7, #1e3a8a); border-color: #60a5fa;">🏆 GRAND FINALE • TỔNG KẾT TOÀN BỘ GAME 🏆</div>
+              <span class="summary-tag">CHỨNG CHỈ TỐT NGHIỆP AN TOÀN SỐ</span>
+              <h2 class="summary-title" id="overallRankTitle">SCAM DETECTOR</h2>
+              <div class="score-big" style="color: var(--gold-pure); margin: 6px 0;" id="overallFinalScore">80.000.000 đ</div>
+              <p style="font-size: 0.8rem; color: #94a3b8; margin: 4px 0 10px;" id="overallRankDesc">Bạn đã hoàn thành xuất sắc các tình huống lừa đảo phổ biến trên mạng xã hội!</p>
+            </div>
+
+            <div class="lesson-box" style="background: rgba(6, 78, 59, 0.4); border-color: #10b981; color: #a7f3d0;">
+              <div class="lesson-title-mini" style="color: #34d399;">🛡️ 5 NGUYÊN TẮC CẢNH GIÁC CỐT LÕI</div>
+              <div style="font-size: 0.8rem; line-height: 1.5; margin-top: 6px;">
+                1. <strong>Quà tặng bất ngờ:</strong> Cảnh giác với xe máy SH, tiền mặt khi không tham gia.<br>
+                2. <strong>Áp lực thời gian:</strong> Thúc ép chuyển tiền ngay để khiến mất bình tĩnh.<br>
+                3. <strong>Bảo mật OTP:</strong> Tuyệt đối không đọc OTP/mật khẩu cho bất kỳ ai.<br>
+                4. <strong>Chuyển phí trước:</strong> Bắt nộp thuế/phí hồ sơ trước là lừa đảo 100%.<br>
+                5. <strong>Lời hứa hoàn tiền:</strong> Bẫy chi phí chìm 'nạp đối ứng để hoàn tiền'.
+              </div>
+            </div>
+
+            <div class="summary-btn-group">
+              <button class="btn-primary-danger" id="overallRestartGameBtn" style="background: var(--primary);">
+                Chơi Lại Từ Đầu Để Rèn Luyện 🔄
+              </button>
+              <button class="btn-secondary" id="overallCloseBtn" type="button">
+                Đóng Bảng Tổng Kết ✕
+              </button>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+      <!-- ================= NHÂN VẬT NGHE ĐIỆN THOẠI BÊN PHẢI (NGƯỜI CHƠI) ================= -->
+      <aside class="call-side-panel call-side-right" id="callSideRight" style="display: none;">
+        <div class="call-card-badge user-badge">
+          <span class="call-badge-dot green"></span>
+          <span id="callRightBadgeText">NGƯỜI CHƠI (BẠN)</span>
+        </div>
+        
+        <div class="call-char-illustration-wrap" id="callRightCharWrap">
+          <img class="call-char-full-img" id="callRightAvatar" src="assets/lv2_nguoi_choi_nu.svg" alt="Người Chơi (Bạn)">
+        </div>
+
+        <div class="call-char-details">
+          <h3 class="call-char-name" id="callRightName">Nguyễn Ngọc Ánh</h3>
+          <div class="call-char-phone" id="callRightPhone">03970866321</div>
+          <div class="call-char-org" id="callRightOrg">Di Động Cá Nhân • SIM Chính</div>
+        </div>
+
+        <div class="call-soundwaves" id="callRightWaves">
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+        </div>
+
+        <div class="call-speaker-status" id="callRightStatus">
+          <span class="status-icon">👂</span>
+          <span class="status-text">Đang lắng nghe...</span>
+        </div>
+
+        <div class="call-side-note" id="callRightNote">
+          🛡️ Giữ bình tĩnh • Không cung cấp mật khẩu, OTP hay chuyển tiền
+        </div>
+      </aside>
+
+      <!-- Backdrop khi mở bảng thẻ trên thiết bị di động -->
+    <div class="outside-cards-backdrop" id="outsideCardsBackdrop"></div>
+
+    <!-- ================= BẢNG THẺ BÊN PHẢI (NGOÀI ĐOẠN CHAT BÊN PHẢI) ================= -->
+    <div class="outside-cards-container" id="outsideCardsContainer" style="display: none;">
+      <!-- 1. MỤC TÀI KHOẢN NGÂN HÀNG & SỐ DƯ HIỆN CÓ (STK & SỐ TIỀN) -->
+      <div class="outside-widget-card outside-bank-card" id="outsideBankCard" style="display: none;">
+        <div class="outside-card-header">
+          <div class="outside-card-title">
+            <span class="outside-title-icon">🏦</span>
+            <span>TÀI KHOẢN NGÂN HÀNG G7</span>
+          </div>
+          <div class="outside-header-actions">
+            <span class="wallet-status-badge safe" id="walletStatusBadge">🛡️ An toàn</span>
+            <button class="outside-card-close-btn" id="btnCloseBankCard" type="button" title="Ẩn bảng này">✕ Đóng</button>
+          </div>
+        </div>
+
+        <div class="outside-bank-body">
+          <div class="bank-field-row">
+            <span class="bank-field-lbl">Số tài khoản (STK):</span>
+            <span class="bank-field-val bank-stk-num" id="outsideBankSTK">03970866321</span>
+          </div>
+          <div class="bank-field-row">
+            <span class="bank-field-lbl">Chủ tài khoản:</span>
+            <span class="bank-field-val bank-owner-name" id="outsideBankOwner">NGUYỄN NGỌC ÁNH</span>
+          </div>
+          <div class="bank-field-row">
+            <span class="bank-field-lbl">Ngân hàng thụ hưởng:</span>
+            <span class="bank-field-val">G7 Digital Bank • CN Cần Thơ</span>
+          </div>
+
+          <div class="outside-balance-box">
+            <div class="outside-balance-label">SỐ DƯ KHẢ DỤNG HIỆN CÓ</div>
+            <div class="outside-balance-display">
+              <span class="wallet-balance-amount" id="walletBalanceAmount">80.000.000</span>
+              <span class="wallet-currency">VNĐ</span>
+            </div>
+            <div class="money-delta-float" id="moneyDeltaFloat">-15.000.000đ</div>
+          </div>
+
+          <div class="wallet-meter-track">
+            <div class="wallet-meter-fill" id="walletMeterFill" style="width: 100%;"></div>
+          </div>
+
+          <div class="outside-bank-actions">
+            <button class="outside-btn-addmoney" id="btnOutsideAddMoney" type="button" title="Xem video nhận 1 triệu VNĐ (Tối đa 3 lần/ngày)">
+              ➕ Xem Video Nhận 1 Triệu (+1.000.000đ)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. MỤC THẺ CĂN CƯỚC CÔNG DÂN (CCCD) NHẬP VAI -->
+      <div class="outside-widget-card outside-cccd-card" id="outsideCccdCard" style="display: none;">
+        <div class="outside-card-header">
+          <div class="outside-card-title">
+            <span class="outside-title-icon">🪪</span>
+            <span>CĂN CƯỚC CÔNG DÂN</span>
+          </div>
+          <div class="outside-header-actions">
+            <button class="outside-switch-char-btn" id="btnOutsideSwitchChar" type="button" title="Đổi danh tính nhân vật">
+              🔄 Đổi
+            </button>
+            <button class="outside-card-close-btn" id="btnCloseCccdCard" type="button" title="Ẩn thẻ này">✕ Đóng</button>
+          </div>
+        </div>
+
+        <!-- Thẻ CCCD trực quan của nhân vật đã chọn -->
+        <div class="outside-cccd-body">
+          <div class="mini-cccd-chip-row">
+            <div class="mini-cccd-chip"></div>
+            <span class="mini-cccd-nation">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</span>
+          </div>
+
+          <div class="mini-cccd-content-grid">
+            <div class="mini-cccd-photo-box">
+              <img src="assets/avatar_female.png?v=29.0" alt="Ảnh CCCD" class="mini-cccd-avatar" id="outsideCccdAvatar">
+            </div>
+
+            <div class="mini-cccd-fields">
+              <div class="mini-field-row highlight-id">
+                <span class="lbl">Số / No.:</span>
+                <span class="val" id="outsideCccdNumber">094306006781</span>
+              </div>
+              <div class="mini-field-row">
+                <span class="lbl">Họ và tên:</span>
+                <span class="val name" id="outsideCccdName">NGUYỄN NGỌC ÁNH</span>
+              </div>
+              <div class="mini-field-row">
+                <span class="lbl">Ngày sinh:</span>
+                <span class="val" id="outsideCccdDob">17/12/2002 (24 tuổi)</span>
+              </div>
+              <div class="mini-field-row">
+                <span class="lbl">Giới tính:</span>
+                <span class="val" id="outsideCccdGender">Nữ</span>
+              </div>
+              <div class="mini-field-row">
+                <span class="lbl">Quê quán:</span>
+                <span class="val" id="outsideCccdHometown">An Bình, Ninh Kiều, Cần Thơ</span>
+              </div>
+              <div class="mini-field-row">
+                <span class="lbl">Nghề nghiệp:</span>
+                <span class="val tag" id="outsideCccdJob">Nghề tự do</span>
+              </div>
+              <div class="mini-field-row">
+                <span class="lbl">Số ĐT:</span>
+                <span class="val phone" id="outsideCccdPhone">03970866321</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= GLOBAL FIXED MODALS (BODY LEVEL - Z-INDEX 999999) ================= -->
+
+  <!-- 7. REWARD MODAL: XEM VIDEO (1 TRIỆU/VIDEO, TỐI ĐA 3/NGÀY) -->
+  <div class="game-modal" id="rewardModal">
+    <div class="reward-modal-content">
+      <div class="reward-modal-header">
+        <h3>🎬 XEM VIDEO NHẬN 1 TRIỆU VNĐ</h3>
+        <button class="reward-modal-close-btn" id="rewardModalCloseBtn" type="button">✕</button>
+      </div>
+
+      <!-- Thẻ số dư ví hiện tại -->
+      <div class="reward-balance-card">
+        <div>
+          <div class="reward-balance-label">SỐ DƯ TÀI KHOẢN HIỆN TẠI</div>
+          <div class="reward-balance-val" id="rewardModalBalanceVal">80.000.000 đ</div>
+        </div>
+        <div style="font-size: 2rem;">🏦</div>
+      </div>
+
+      <!-- Mục 2: Xem Video Nhận 1 Triệu VNĐ (Tối đa 3 video/ngày) -->
+      <div class="reward-section-box" id="rewardAdSection" style="margin-bottom: 0;">
+        <div class="reward-section-top">
+          <div class="reward-section-title">
+            <span>🎬</span> Xem Video Nhận 1 Triệu VNĐ
+          </div>
+          <span class="reward-badge-limit">1.000.000đ / Video</span>
+        </div>
+        <p class="reward-video-desc">
+          Xem clip 5 giây mẹo nhận diện lừa đảo mạng để nhận ngay <strong>+1.000.000 VNĐ</strong> (Giới hạn tối đa 3 video/ngày).
+        </p>
+        
+        <div class="reward-ad-progress-row">
+          <span>Lượt xem hôm nay: <strong id="adWatchCountText" style="color: #00539C;">0 / 3</strong> video</span>
+          <div class="reward-ad-steps" id="adStepsContainer">
+            <div class="ad-step-dot" id="adStepDot1"></div>
+            <div class="ad-step-dot" id="adStepDot2"></div>
+            <div class="ad-step-dot" id="adStepDot3"></div>
+          </div>
+        </div>
+
+        <button class="btn-watch-ad" id="btnWatchAdAction" type="button">
+          ▶ XEM VIDEO NHẬN 1 TRIỆU VNĐ (+1.000.000đ)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. VIDEO PLAYER OVERLAY (Đếm ngược 5 giây nhận tiền) -->
+  <div class="ad-player-overlay" id="adPlayerOverlay">
+    <div class="ad-player-card">
+      <div style="font-size: 0.76rem; color: #FAD550; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">
+        🎬 CLIP QUẢNG CÁO NHẬN THƯỞNG (+1.000.000đ)
+      </div>
+      <div class="ad-player-video-box">
+        <video id="adVideoPlayer" class="ad-real-video" src="assets/ad_reward.mp4" playsinline muted autoplay loop></video>
+        <div class="ad-video-tip" id="adVideoTipText">
+          "NGUYÊN TẮC VÀNG: Không bao giờ cung cấp mã OTP ngân hàng cho bất kỳ ai, kể cả nhân viên tự xưng là tổng đài!"
+        </div>
+      </div>
+      <div class="ad-player-msg">Đang phát clip nhận tiền... Tiền thưởng sẽ cộng sau:</div>
+      <div class="ad-timer-countdown" id="adTimerCountdown">5s</div>
+      <div style="font-size: 0.72rem; color: #94a3b8;">Vui lòng đợi hết video để nhận 1.000.000 VNĐ</div>
+    </div>
+  </div>
+
+  <!-- 9. BANKRUPT / LOST ALL MONEY MODAL -->
+  <div class="game-modal" id="bankruptModal">
+    <div class="modal-content bankrupt-modal-card">
+      <div class="bankrupt-icon">💸🚨</div>
+      <h2 class="bankrupt-title">CHÁY TÚI! MẤT TRẮNG TIỀN!</h2>
+      <div style="font-size: 1.6rem; font-weight: 900; color: #dc2626; margin: 8px 0; font-family: 'Pixelify Sans', cursive, sans-serif;" id="bankruptBalanceDisplay">
+        Số dư: 0 VNĐ
+      </div>
+      <p class="bankrupt-desc" id="bankruptDescText">
+        Do mắc bẫy tâm lý và cung cấp thông tin nhạy cảm cho kẻ gian, toàn bộ <strong>80.000.000 VNĐ</strong> trong tài khoản của bạn đã bị hacker rút sạch!
+      </p>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <button class="btn-primary-danger" id="bankruptWatchAdBtn" type="button" style="background: #00539C;">
+          🎬 Xem Video Nhận Ngay 1 Triệu VNĐ ➔
+        </button>
+        <button class="btn-secondary" id="bankruptResetBalanceBtn" type="button" style="border-color: #FAD550; color: #002242; font-weight: 700;">
+          🔄 Khôi Phục Lại 80.000.000đ Để Thử Lại
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/soundEngine.js?v=52.0"></script>
+  <script src="js/storyData.js?v=52.0"></script>
+  <script src="js/gameEngine.js?v=52.0"></script>
+  <script>
+    // G7 Loading & Level Selection Controller (Navy & Gold Flow)
+    class LoadingController {
+      constructor() {
+        this.screen = document.getElementById('loadingScreen');
+        this.btnContinue = document.getElementById('btnContinueGame');
+        this.barWrapper = document.getElementById('loadingBarWrapper');
+        this.bar = document.getElementById('loadingBarFill');
+        this.percentText = document.getElementById('loadingPercentText');
+        this.statusText = document.getElementById('loadingStatusText');
+        this.showSplashBtn = document.getElementById('showSplashBtn');
+
+        this.levelModal = document.getElementById('levelSelectModal');
+        this.levelGrid = document.getElementById('levelGridContainer');
+        this.btnOpenLevelSelect = document.getElementById('btnOpenLevelSelect');
+        this.btnCloseLevelSelect = document.getElementById('btnCloseLevelSelect');
+
+        // Collect 50M VND Initial Modal Elements
+        this.collectModal = document.getElementById('collectInitialModal');
+        this.btnCollectInitial = document.getElementById('btnCollectInitialAction');
+
+        // Level Select Screen Topbar Elements (Left Money, Right Calendar)
+        this.levelScreenBalanceVal = document.getElementById('levelScreenBalanceVal');
+        this.btnLevelScreenAddMoney = document.getElementById('btnLevelScreenAddMoney');
+        this.btnLevelScreenCalendar = document.getElementById('btnLevelScreenCalendar');
+        this.levelTopbarMoney = document.getElementById('levelTopbarMoney');
+
+        this.progress = 0;
+        this.timer = null;
+        this.isDone = false;
+        this.isLoading = false;
+        this.gameStarted = false;
+
+        this.stages = [
+          { threshold: 25, text: "Đang khởi tạo hệ thống an toàn số G7..." },
+          { threshold: 55, text: "Đang tải dữ liệu 4 Level kịch bản lừa đảo mạng..." },
+          { threshold: 85, text: "Đang kích hoạt lá chắn bảo vệ OTP & Tài khoản..." },
+          { threshold: 99, text: "Chuẩn bị nạp danh mục thử thách..." },
+          { threshold: 100, text: "Hệ thống sẵn sàng! Chọn danh tính công dân..." }
+        ];
+
+        this.init();
+      }
+
+      init() {
+        this.resetToWelcome();
+
+        if (this.btnContinue) {
+          const onContinue = (e) => {
+            if (e) {
+              e.preventDefault();
+              e.stopPropagation();
+            }
+            this.startLoading();
+          };
+          this.btnContinue.onclick = onContinue;
+          this.btnContinue.addEventListener('click', onContinue);
+        }
+
+        if (this.showSplashBtn) {
+          this.showSplashBtn.addEventListener('click', () => {
+            this.closeLevelSelect();
+            if (this.collectModal) this.collectModal.classList.remove('active');
+            this.resetToWelcome();
+          });
+        }
+
+        if (this.btnOpenLevelSelect) {
+          this.btnOpenLevelSelect.addEventListener('click', () => {
+            this.openLevelSelect();
+          });
+        }
+
+        if (this.btnCloseLevelSelect) {
+          this.btnCloseLevelSelect.addEventListener('click', () => {
+            if (this.gameStarted) {
+              this.closeLevelSelect();
+            } else {
+              alert('Vui lòng chọn một Level (Level 1, 2, 3 hoặc 4) để bắt đầu thử thách!');
+            }
+          });
+        }
+
+        const btnLevelBackCircle = document.getElementById('btnLevelBackCircle');
+        if (btnLevelBackCircle) {
+          btnLevelBackCircle.addEventListener('click', () => {
+            if (this.gameStarted) {
+              this.closeLevelSelect();
+            } else {
+              this.closeLevelSelect();
+              if (this.collectModal) {
+                this.collectModal.classList.add('active');
+              } else {
+                this.resetToWelcome();
+              }
+            }
+          });
+        }
+
+        if (this.levelModal) {
+          this.levelModal.addEventListener('click', (e) => {
+            if (e.target === this.levelModal) {
+              if (this.gameStarted) {
+                this.closeLevelSelect();
+              }
+            }
+          });
+        }
+
+        // Bấm nút Collect 50 Triệu VNĐ -> Mở màn hình Chọn Level (Level 1, 2, 3, 4)
+        if (this.btnCollectInitial) {
+          this.btnCollectInitial.addEventListener('click', () => {
+            try {
+              if (window.soundEngine && typeof window.soundEngine.playVictory === 'function') {
+                window.soundEngine.playVictory();
+              }
+            } catch (err) {}
+
+            try {
+              localStorage.setItem('g7_onboarding_completed', 'true');
+            } catch (e) {}
+
+            // Cập nhật số dư 80.000.000 VNĐ
+            if (window.game) {
+              window.game.bankBalance = 80000000;
+              window.game.initialBalance = 80000000;
+              window.game.saveWallet();
+              window.game.updateWalletUI(0, false);
+            }
+
+            // Mở màn hình chọn Level NGAY LẬP TỨC
+            this.openLevelSelect();
+
+            // Đóng popup Collect NGAY LẬP TỨC
+            if (this.collectModal) {
+              this.collectModal.classList.remove('active');
+            }
+          });
+        }
+
+        // Nút quay lại chọn thông tin CCCD từ popup nhận tiền
+        const btnBackToChar = document.getElementById('btnBackToCharSelectFromCollect');
+        if (btnBackToChar) {
+          btnBackToChar.addEventListener('click', () => {
+            if (this.collectModal) this.collectModal.classList.remove('active');
+            if (window.game) window.game.updateCharacterUI('show_both');
+            const charModal = document.getElementById('characterSelectModal');
+            if (charModal) charModal.classList.add('active');
+          });
+        }
+
+        // BƯỚC 2: Xử lý sau khi chọn danh tính CCCD (Nam hoặc Nữ) -> LUÔN MỞ POPUP NHẬN TIỀN!
+        const onCharSelectAction = (gender) => {
+          if (window.game) {
+            window.game.setCharacter(gender);
+          }
+          
+          // LUÔN MỞ POPUP NHẬN 50 TRIỆU NGAY SAU KHI CHỌN DANH TÍNH
+          if (this.collectModal) {
+            this.collectModal.classList.add('active');
+          } else {
+            this.openLevelSelect();
+          }
+
+          const charModal = document.getElementById('characterSelectModal');
+          if (charModal) charModal.classList.remove('active');
+        };
+
+        const btnSelectF = document.getElementById('btnSelectFemale');
+        if (btnSelectF) {
+          btnSelectF.addEventListener('click', (e) => {
+            e.stopPropagation();
+            onCharSelectAction('female');
+          });
+        }
+
+        const btnSelectM = document.getElementById('btnSelectMale');
+        if (btnSelectM) {
+          btnSelectM.addEventListener('click', (e) => {
+            e.stopPropagation();
+            onCharSelectAction('male');
+          });
+        }
+
+        const cardFemale = document.getElementById('cardFemale');
+        if (cardFemale) {
+          cardFemale.addEventListener('click', (e) => {
+            if (!e.target.closest('button')) {
+              onCharSelectAction('female');
+            }
+          });
+        }
+
+        const cardMale = document.getElementById('cardMale');
+        if (cardMale) {
+          cardMale.addEventListener('click', (e) => {
+            if (!e.target.closest('button')) {
+              onCharSelectAction('male');
+            }
+          });
+        }
+
+        const btnContinueWithChosenChar = document.getElementById('btnContinueWithChosenChar');
+        if (btnContinueWithChosenChar) {
+          btnContinueWithChosenChar.addEventListener('click', (e) => {
+            e.stopPropagation();
+
+            // LUÔN MỞ POPUP NHẬN TIỀN
+            if (this.collectModal) {
+              this.collectModal.classList.add('active');
+            } else {
+              this.openLevelSelect();
+            }
+
+            const charModal = document.getElementById('characterSelectModal');
+            if (charModal) charModal.classList.remove('active');
+          });
+        }
+
+        // Bấm vào tiền hoặc dấu [+] bên cạnh số tiền ở màn hình Level -> Xem video nhận 1 triệu VNĐ (Tối đa 3 lần/ngày)
+        if (this.btnLevelScreenAddMoney) {
+          this.btnLevelScreenAddMoney.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (window.game) window.game.startWatchAd();
+          });
+        }
+        if (this.levelTopbarMoney) {
+          this.levelTopbarMoney.addEventListener('click', () => {
+            if (window.game) window.game.startWatchAd();
+          });
+        }
+
+
+        // Bấm nút mũi tên Back trong header chat để back ra màn hình chọn Level
+        const btnChatHeaderBack = document.getElementById('btnChatHeaderBack');
+        if (btnChatHeaderBack) {
+          btnChatHeaderBack.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            if (window.game) window.game.updateCallMode(null);
+            this.openLevelSelect();
+          });
+        }
+
+        // Bấm nút mũi tên Back nổi ngoài màn hình để back ra màn hình chọn Level
+        const btnInGameFloatingBack = document.getElementById('btnInGameFloatingBack');
+        if (btnInGameFloatingBack) {
+          btnInGameFloatingBack.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            if (window.game) window.game.updateCallMode(null);
+            this.openLevelSelect();
+          });
+        }
+
+        // Nút âm thanh trên màn hình Level
+        const btnLevelSoundToggle = document.getElementById('btnLevelSoundToggle');
+        if (btnLevelSoundToggle) {
+          btnLevelSoundToggle.addEventListener('click', () => {
+            if (window.soundEngine) {
+              const enabled = window.soundEngine.toggleSound();
+              btnLevelSoundToggle.textContent = enabled ? '🔊 Âm thanh: Bật' : '🔇 Âm thanh: Tắt';
+            }
+          });
+        }
+
+        // Nút quay lại màn hình chờ trên màn hình Level
+        const btnLevelSplashBack = document.getElementById('btnLevelSplashBack');
+        if (btnLevelSplashBack) {
+          btnLevelSplashBack.addEventListener('click', () => {
+            this.closeLevelSelect();
+            if (this.collectModal) this.collectModal.classList.remove('active');
+            this.resetToWelcome();
+          });
+        }
+
+        this.renderLevels();
+      }
+
+      resetToWelcome() {
+        if (this.timer) clearInterval(this.timer);
+        this.progress = 0;
+        this.isDone = false;
+        this.isLoading = false;
+        this.gameStarted = false;
+
+        const mainWrapper = document.getElementById('mainWrapper');
+        if (mainWrapper) mainWrapper.style.display = 'none';
+        const topNavbar = document.getElementById('topNavbar');
+        if (topNavbar) topNavbar.style.display = 'none';
+
+        if (this.screen) {
+          this.screen.classList.remove('fade-out');
+          this.screen.style.display = 'flex';
+        }
+        if (this.barWrapper) {
+          this.barWrapper.style.display = 'block';
+        }
+        this.updateUI();
+        this.startLoading();
+      }
+
+      startLoading() {
+        if (this.isLoading) return;
+        this.isLoading = true;
+        if (this.timer) clearInterval(this.timer);
+
+        try {
+          if (window.soundEngine && typeof window.soundEngine.playClick === 'function') {
+            window.soundEngine.playClick();
+          }
+        } catch (e) {
+          console.warn("Sound error:", e);
+        }
+
+        if (this.btnContinue) {
+          this.btnContinue.style.display = 'none';
+        }
+        if (this.barWrapper) {
+          this.barWrapper.style.display = 'block';
+        }
+
+        this.progress = 0;
+        this.isDone = false;
+        this.updateUI();
+        this.tick();
+      }
+
+      tick() {
+        const interval = 35; // Runs smoothly over ~3.8 to 4.2 seconds
+        this.timer = setInterval(() => {
+          if (this.progress < 100) {
+            const increment = this.progress < 25 ? 0.65 : (this.progress < 60 ? 0.75 : (this.progress < 85 ? 0.5 : 0.85));
+            this.progress = Math.min(100, this.progress + increment);
+            this.updateUI();
+          } else {
+            clearInterval(this.timer);
+            this.onComplete();
+          }
+        }, interval);
+      }
+
+      updateUI() {
+        const roundVal = Math.floor(this.progress);
+        if (this.bar) this.bar.style.width = `${roundVal}%`;
+        if (this.percentText) this.percentText.textContent = `${roundVal}%`;
+
+        const currentStage = this.stages.find(s => roundVal <= s.threshold) || this.stages[this.stages.length - 1];
+        if (this.statusText && this.statusText.textContent !== currentStage.text) {
+          this.statusText.textContent = currentStage.text;
+        }
+      }
+
+      onComplete() {
+        if (this.isDone) return;
+        this.isDone = true;
+        this.updateUI();
+
+        try {
+          if (window.soundEngine && typeof window.soundEngine.playScoreUp === 'function') {
+            window.soundEngine.playScoreUp();
+          }
+        } catch (e) {}
+
+        // Hold briefly at 100% so player sees success before transition
+        setTimeout(() => {
+          this.finish();
+        }, 550);
+      }
+
+      finish() {
+        if (this.timer) clearInterval(this.timer);
+        this.progress = 100;
+        this.isDone = true;
+        this.isLoading = false;
+        this.updateUI();
+
+        // BƯỚC 1: LUÔN LUÔN hiển thị bước chọn thông tin CCCD trước
+        if (window.game) window.game.updateCharacterUI('show_both');
+        const charModal = document.getElementById('characterSelectModal');
+        const btnCloseChar = document.getElementById('btnCloseCharSelect');
+        if (btnCloseChar) btnCloseChar.style.display = 'none';
+        if (charModal) {
+          charModal.classList.add('active');
+        } else if (this.collectModal) {
+          this.collectModal.classList.add('active');
+        } else {
+          this.openLevelSelect();
+        }
+
+        // Fade out màn hình loading mượt mà
+        if (this.screen) {
+          this.screen.classList.add('fade-out');
+          setTimeout(() => {
+            this.screen.style.display = 'none';
+          }, 350);
+        }
+      }
+
+      renderLevels() {
+        if (!this.levelGrid || !window.STORY_DATA || !window.STORY_DATA.chapters) return;
+
+        const currentIdx = window.game ? window.game.currentChapterIndex : 0;
+
+        // Render pure pixel art circles (Level 1, 2, 3, 4) - no explanations, only Level numbers
+        this.levelGrid.innerHTML = window.STORY_DATA.chapters.map((ch, idx) => {
+          const isCurrent = (idx === currentIdx);
+          const num = ch.number;
+          return `
+            <button class="pixel-level-btn ${isCurrent ? 'current-active' : ''}" type="button" data-chapter-index="${idx}" aria-label="Level ${num}" title="Level ${num}">
+              <svg class="pixel-circle-svg" viewBox="0 0 20 20" shape-rendering="crispEdges">
+                <!-- Black outer pixel border -->
+                <g fill="#141414">
+                  <rect x="6" y="1" width="8" height="1"/>
+                  <rect x="4" y="2" width="2" height="1"/>
+                  <rect x="14" y="2" width="2" height="1"/>
+                  <rect x="2" y="3" width="2" height="1"/>
+                  <rect x="16" y="3" width="2" height="1"/>
+                  <rect x="2" y="4" width="1" height="2"/>
+                  <rect x="17" y="4" width="1" height="2"/>
+                  <rect x="1" y="6" width="1" height="8"/>
+                  <rect x="18" y="6" width="1" height="8"/>
+                  <rect x="2" y="14" width="1" height="2"/>
+                  <rect x="17" y="14" width="1" height="2"/>
+                  <rect x="2" y="16" width="2" height="1"/>
+                  <rect x="16" y="16" width="2" height="1"/>
+                  <rect x="4" y="17" width="2" height="1"/>
+                  <rect x="14" y="17" width="2" height="1"/>
+                  <rect x="6" y="18" width="8" height="1"/>
+                </g>
+
+                <!-- Red inner pixel border ("viền đỏ") -->
+                <g fill="#E60023">
+                  <rect x="6" y="2" width="8" height="1"/>
+                  <rect x="4" y="3" width="2" height="1"/>
+                  <rect x="14" y="3" width="2" height="1"/>
+                  <rect x="3" y="4" width="1" height="2"/>
+                  <rect x="16" y="4" width="1" height="2"/>
+                  <rect x="2" y="6" width="1" height="8"/>
+                  <rect x="17" y="6" width="1" height="8"/>
+                  <rect x="3" y="14" width="1" height="2"/>
+                  <rect x="16" y="14" width="1" height="2"/>
+                  <rect x="4" y="16" width="2" height="1"/>
+                  <rect x="14" y="16" width="2" height="1"/>
+                  <rect x="6" y="17" width="8" height="1"/>
+                </g>
+
+                <!-- Yellow primary fill ("vàng chủ đạo") -->
+                <g fill="#FFD000">
+                  <rect x="6" y="3" width="8" height="1"/>
+                  <rect x="4" y="4" width="12" height="2"/>
+                  <rect x="3" y="6" width="14" height="6"/>
+                </g>
+
+                <!-- Top-left light yellow pixel highlight -->
+                <g fill="#FFF9A6">
+                  <rect x="6" y="3" width="4" height="1"/>
+                  <rect x="4" y="4" width="3" height="1"/>
+                  <rect x="4" y="5" width="2" height="1"/>
+                  <rect x="3" y="6" width="2" height="2"/>
+                </g>
+
+                <!-- Red pixel bottom shadow (chunky pixel steps) -->
+                <g fill="#DC2626">
+                  <rect x="3" y="12" width="14" height="2"/>
+                  <rect x="4" y="14" width="12" height="2"/>
+                  <rect x="6" y="16" width="8" height="1"/>
+                </g>
+
+                <!-- Deep dark red bottom edge -->
+                <g fill="#991B1B">
+                  <rect x="5" y="15" width="10" height="1"/>
+                  <rect x="6" y="16" width="8" height="1"/>
+                </g>
+
+                <!-- White Pixel Number in center ("số màu trắng") -->
+                <text x="10" y="11.5" text-anchor="middle" dominant-baseline="central" font-family="'Pixelify Sans', cursive, sans-serif" font-size="9" font-weight="900" fill="#7A000A">${num}</text>
+                <text x="10" y="10.2" text-anchor="middle" dominant-baseline="central" font-family="'Pixelify Sans', cursive, sans-serif" font-size="9" font-weight="900" fill="#FFFFFF">${num}</text>
+              </svg>
+            </button>
+          `;
+        }).join('');
+
+        const btns = this.levelGrid.querySelectorAll('.pixel-level-btn');
+        btns.forEach(btn => {
+          const idx = parseInt(btn.getAttribute('data-chapter-index'), 10);
+          btn.addEventListener('click', () => {
+            this.selectLevel(idx);
+          });
+        });
+      }
+
+      selectLevel(chapterIndex) {
+        this.gameStarted = true;
+        try {
+          if (window.soundEngine && typeof window.soundEngine.playClick === 'function') {
+            window.soundEngine.playClick();
+          }
+        } catch (e) {}
+
+        const mainWrapper = document.getElementById('mainWrapper');
+        if (mainWrapper) mainWrapper.style.display = 'flex';
+        const topNavbar = document.getElementById('topNavbar');
+        if (topNavbar) topNavbar.style.display = 'flex';
+
+        if (window.game) {
+          window.game.loadChapter(chapterIndex);
+        }
+        this.closeLevelSelect();
+      }
+
+      openLevelSelect() {
+        this.renderLevels();
+        if (window.game) {
+          if (this.levelScreenBalanceVal) {
+            this.levelScreenBalanceVal.textContent = window.game.formatVND(window.game.bankBalance);
+            this.levelScreenBalanceVal.style.color = window.game.bankBalance < 0 ? '#ef4444' : '#FFFFFF';
+          }
+        }
+        if (this.levelModal) {
+          this.levelModal.classList.add('active');
+        }
+      }
+
+      closeLevelSelect() {
+        if (this.levelModal) {
+          this.levelModal.classList.remove('active');
+        }
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      window.loadingCtrl = new LoadingController();
+      window.game = new GameEngine(window.STORY_DATA);
+      window.game.init();
+    });
+  </script>
+</body>
+</html>

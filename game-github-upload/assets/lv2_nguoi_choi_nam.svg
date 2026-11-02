@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 380" width="100%" height="100%">
+  <defs>
+    <!-- Background Glow -->
+    <linearGradient id="victimMaleGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#064e3b" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="poloGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="skinGradM" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="phoneGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <filter id="glowDropM" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0284c7" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Backdrop Aura -->
+  <circle cx="140" cy="180" r="120" fill="url(#victimMaleGlow)"/>
+
+  <!-- Alarmed Glyph -->
+  <g transform="translate(48, 80)">
+    <circle cx="12" cy="12" r="12" fill="#ef4444" opacity="0.9"/>
+    <text x="7" y="18" font-family="Arial, sans-serif" font-size="16" font-weight="900" fill="#ffffff">!</text>
+  </g>
+  <g transform="translate(225, 95)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="#fbbf24">?</text>
+  </g>
+
+  <!-- Body / Torso (Blue Polo Shirt) -->
+  <path d="M74 280 L74 375 L206 375 L206 280 C206 240 180 220 140 220 C100 220 74 240 74 280 Z" fill="url(#poloGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+
+  <!-- White Polo Collar -->
+  <polygon points="140,240 115,220 165,220" fill="#f8fafc"/>
+  <polygon points="140,240 134,265 146,265" fill="#e2e8f0"/>
+
+  <!-- Neck -->
+  <rect x="127" y="180" width="26" height="44" fill="#fde68a" rx="4"/>
+
+  <!-- Head / Face -->
+  <ellipse cx="140" cy="145" rx="38" ry="46" fill="url(#skinGradM)" filter="url(#glowDropM)"/>
+
+  <!-- Modern Short Hair -->
+  <path d="M96 130 C94 80 115 65 140 65 C170 65 186 80 184 130 C175 105 160 98 140 100 C120 98 105 105 96 130 Z" fill="#0f172a"/>
+  <!-- Hair tufts -->
+  <path d="M125 65 L135 78 L148 68 L158 80" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Eyebrows (Alarmed / Worried slant) -->
+  <path d="M116 122 Q126 126 134 122" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M146 122 Q154 126 164 122" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Eyes (Wide with shock) -->
+  <ellipse cx="125" cy="134" rx="6" ry="7" fill="#0f172a"/>
+  <circle cx="127" cy="132" r="2.5" fill="#ffffff"/>
+  <ellipse cx="155" cy="134" rx="6" ry="7" fill="#0f172a"/>
+  <circle cx="157" cy="132" r="2.5" fill="#ffffff"/>
+
+  <!-- Nose -->
+  <path d="M140 137 L138 148 L143 148" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Open Worried Mouth ("Hả?! Giao dịch 18,6 triệu gì?") -->
+  <ellipse cx="140" cy="164" rx="6.5" ry="8.5" fill="#0f172a"/>
+  <path d="M136 159 Q140 162 144 159" fill="#ffffff"/>
+
+  <!-- Sweat drop on temple -->
+  <path d="M165 106 Q171 116 167 119 Q163 119 163 113 Z" fill="#38bdf8" opacity="0.9"/>
+
+  <!-- Right Arm holding Smartphone tightly to ear -->
+  <path d="M202 280 C218 250 228 200 200 155" fill="none" stroke="#0284c7" stroke-width="22" stroke-linecap="round"/>
+  
+  <!-- Smartphone in Hand (at ear) -->
+  <rect x="187" y="122" width="24" height="50" rx="6" fill="url(#phoneGradM)" stroke="#38bdf8" stroke-width="2" transform="rotate(18 199 147)" filter="url(#glowDropM)"/>
+  <rect x="190" y="126" width="18" height="40" rx="4" fill="#0284c7" opacity="0.65" transform="rotate(18 199 147)"/>
+
+  <!-- Hand fingers gripping phone -->
+  <ellipse cx="194" cy="158" rx="6" ry="4.5" fill="#fde68a" transform="rotate(18 194 158)"/>
+  <ellipse cx="192" cy="148" rx="6" ry="4.5" fill="#fde68a" transform="rotate(18 192 148)"/>
+  <ellipse cx="190" cy="138" rx="6" ry="4.5" fill="#fde68a" transform="rotate(18 190 138)"/>
+
+  <!-- Left Arm hand on head in distress -->
+  <path d="M78 280 Q55 220 95 130" fill="none" stroke="#0284c7" stroke-width="20" stroke-linecap="round"/>
+  <ellipse cx="98" cy="126" rx="8" ry="8" fill="#fde68a"/>
+
+  <!-- Sound Waves from Phone -->
+  <g transform="translate(216, 125)">
+    <path d="M0 5 Q12 18 0 30" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+    <path d="M8 0 Q24 18 8 36" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- Tag "NGƯỜI CHƠI (BẠN)" -->
+  <g transform="translate(25, 335)">
+    <rect x="0" y="0" width="230" height="32" rx="16" fill="#0f2942" stroke="#38bdf8" stroke-width="1.5" filter="url(#glowDropM)"/>
+    <circle cx="16" cy="16" r="6" fill="#10b981"/>
+    <text x="30" y="21" font-family="Arial, sans-serif" font-size="11" font-weight="900" fill="#ffffff" letter-spacing="0.5">NGƯỜI CHƠI (BẠN)</text>
+    <text x="188" y="21" font-family="Arial, sans-serif" font-size="12">📱</text>
+  </g>
+</svg>

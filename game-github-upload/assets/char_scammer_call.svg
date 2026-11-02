@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 380" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="scamGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="suitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#091322"/>
+    </linearGradient>
+    <linearGradient id="tieGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#fcd34d"/>
+    </linearGradient>
+    <linearGradient id="phoneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="glowDrop" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0284c7" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Backdrop Aura -->
+  <circle cx="140" cy="180" r="120" fill="url(#scamGlow)"/>
+
+  <!-- Audio Wave Rings from Phone -->
+  <circle cx="80" cy="140" r="28" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.4" stroke-dasharray="4 4"/>
+  <circle cx="80" cy="140" r="42" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.25" stroke-dasharray="6 6"/>
+
+  <!-- Body / Torso (Navy Suit) -->
+  <path d="M70 280 L70 375 L210 375 L210 280 C210 240 185 220 140 220 C95 220 70 240 70 280 Z" fill="url(#suitGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+
+  <!-- White Shirt & Red Tie -->
+  <polygon points="140,220 115,260 165,260" fill="#f8fafc"/>
+  <polygon points="135,225 145,225 148,275 140,290 132,275" fill="url(#tieGrad)"/>
+  
+  <!-- Fake VietBank Badge Cord & Card -->
+  <line x1="125" y1="225" x2="115" y2="310" stroke="#0284c7" stroke-width="2.5"/>
+  <line x1="155" y1="225" x2="115" y2="310" stroke="#0284c7" stroke-width="2.5"/>
+  <rect x="95" y="305" width="40" height="26" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" filter="url(#glowDrop)"/>
+  <rect x="98" y="308" width="34" height="6" fill="#0284c7"/>
+  <rect x="100" y="318" width="16" height="8" rx="1" fill="#cbd5e1"/>
+  <line x1="120" y1="320" x2="132" y2="320" stroke="#64748b" stroke-width="2"/>
+  <line x1="120" y1="324" x2="128" y2="324" stroke="#64748b" stroke-width="1.5"/>
+
+  <!-- Neck -->
+  <rect x="126" y="185" width="28" height="40" fill="#fcd34d" rx="4"/>
+
+  <!-- Head / Face -->
+  <ellipse cx="140" cy="145" rx="38" ry="46" fill="url(#skinGrad)" filter="url(#glowDrop)"/>
+
+  <!-- Sleek Hair (Styled Side Part) -->
+  <path d="M102 135 C98 90 120 75 145 75 C175 75 185 95 180 135 C174 115 162 108 140 108 C120 108 108 118 102 135 Z" fill="#0f172a"/>
+  <!-- Hair tuft -->
+  <path d="M140 75 C155 70 170 78 178 88" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Eyebrows (Deceitful / Cunning curve) -->
+  <path d="M115 125 Q125 120 134 124" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M146 124 Q155 120 165 125" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Eyes (Intense, sharp looking forward) -->
+  <ellipse cx="125" cy="134" rx="4.5" ry="3.5" fill="#0f172a"/>
+  <circle cx="126.5" cy="133" r="1.5" fill="#ffffff"/>
+  <ellipse cx="155" cy="134" rx="4.5" ry="3.5" fill="#0f172a"/>
+  <circle cx="156.5" cy="133" r="1.5" fill="#ffffff"/>
+
+  <!-- Nose -->
+  <path d="M140 135 L137 150 L143 150" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Mouth (Smooth Talker / Persuasive Smirk) -->
+  <path d="M128 165 Q140 174 154 167" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Call Center Headset & Mic -->
+  <path d="M102 145 C98 105 120 90 140 90 C162 90 180 105 178 145" fill="none" stroke="#38bdf8" stroke-width="4.5" stroke-linecap="round"/>
+  <rect x="97" y="136" width="9" height="20" rx="3" fill="#0284c7" stroke="#ffffff" stroke-width="1"/>
+  <rect x="174" y="136" width="9" height="20" rx="3" fill="#0284c7" stroke="#ffffff" stroke-width="1"/>
+  <path d="M102 150 Q105 178 126 178" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="128" cy="178" r="4.5" fill="#ef4444"/>
+
+  <!-- Left Arm holding Phone to Ear -->
+  <path d="M72 280 C60 250 55 200 78 160" fill="none" stroke="#1e293b" stroke-width="24" stroke-linecap="round"/>
+  
+  <!-- Smartphone in Hand (at ear) -->
+  <rect x="64" y="120" width="24" height="48" rx="5" fill="url(#phoneGrad)" stroke="#38bdf8" stroke-width="2" transform="rotate(-15 76 144)" filter="url(#glowDrop)"/>
+  <!-- Screen of phone glowing -->
+  <rect x="67" y="124" width="18" height="38" rx="3" fill="#0284c7" opacity="0.6" transform="rotate(-15 76 144)"/>
+
+  <!-- Hand fingers gripping phone -->
+  <ellipse cx="80" cy="154" rx="7" ry="5" fill="#fcd34d" transform="rotate(-15 80 154)"/>
+  <ellipse cx="82" cy="144" rx="7" ry="5" fill="#fcd34d" transform="rotate(-15 82 144)"/>
+  <ellipse cx="84" cy="134" rx="7" ry="5" fill="#fcd34d" transform="rotate(-15 84 134)"/>
+
+  <!-- Right Arm with index finger pointing forward (Psychological pressure) -->
+  <path d="M205 280 Q235 250 220 220" fill="none" stroke="#1e293b" stroke-width="22" stroke-linecap="round"/>
+  <ellipse cx="220" cy="214" rx="9" ry="9" fill="#fcd34d"/>
+  <rect x="215" y="195" width="8" height="22" rx="4" fill="#fcd34d" transform="rotate(-25 219 206)"/>
+
+  <!-- Speech Waves Animation Graphic -->
+  <g transform="translate(45, 120)">
+    <path d="M0 0 Q-15 15 0 30" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+    <path d="M-8 -6 Q-28 15 -8 36" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+    <path d="M-16 -12 Q-40 15 -16 42" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+  </g>
+
+  <!-- Tag "KẺ GIẢ DANH NGÂN HÀNG" -->
+  <g transform="translate(25, 335)">
+    <rect x="0" y="0" width="230" height="32" rx="16" fill="#0b1e3b" stroke="#38bdf8" stroke-width="1.5" filter="url(#glowDrop)"/>
+    <circle cx="16" cy="16" r="6" fill="#ef4444"/>
+    <text x="30" y="21" font-family="Arial, sans-serif" font-size="11" font-weight="900" fill="#ffffff" letter-spacing="0.5">NGƯỜI HẠI (KẺ LỪA ĐẢO)</text>
+    <text x="188" y="21" font-family="Arial, sans-serif" font-size="12">📞</text>
+  </g>
+</svg>

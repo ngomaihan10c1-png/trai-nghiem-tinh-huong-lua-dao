@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="bgMale" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Card -->
+  <rect x="4" y="4" width="92" height="92" rx="8" fill="url(#bgMale)" stroke="#FAD550" stroke-width="4"/>
+  <!-- Hair Short Modern Student -->
+  <path d="M26 40 C26 22 36 16 50 16 C64 16 74 22 74 40 C70 34 62 34 50 34 C38 34 30 34 26 40 Z" fill="#0F172A"/>
+  <!-- Hair Texture / Tuft -->
+  <path d="M42 16 L48 24 L56 18 L62 26" fill="none" stroke="#0F172A" stroke-width="4" stroke-linecap="round"/>
+  <!-- Face -->
+  <circle cx="50" cy="49" r="18" fill="#FDE68A"/>
+  <!-- Eyebrows -->
+  <path d="M38 41 L47 41" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M53 41 L62 41" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <circle cx="43" cy="46" r="2.5" fill="#0F172A"/>
+  <circle cx="57" cy="46" r="2.5" fill="#0F172A"/>
+  <!-- Smile -->
+  <path d="M44 57 Q50 63 56 57" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Student Shirt / Polo with Collar -->
+  <path d="M26 88 C26 72 36 70 50 70 C64 70 74 72 74 88 Z" fill="#0284C7"/>
+  <!-- White Polo Collar -->
+  <polygon points="50,71 40,78 48,82" fill="#F8FAFC"/>
+  <polygon points="50,71 60,78 52,82" fill="#F8FAFC"/>
+  <!-- Student ID Badge Cord -->
+  <line x1="44" y1="84" x2="50" y2="92" stroke="#F59E0B" stroke-width="2"/>
+  <line x1="56" y1="84" x2="50" y2="92" stroke="#F59E0B" stroke-width="2"/>
+</svg>
